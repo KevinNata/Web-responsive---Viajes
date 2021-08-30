@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+
+
+body{
+    font-family:'Urbanist', sans-serif; 
+    background-color: #f4f4f4;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    width: 98%;
+    margin: auto;
+}
+     /*  INICIO DEL HEADER  */
+header{
+    width:100%;
+    height:50px;
+    background: #2ED92E;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;  /* sirve para que nada tape al header. Asigna ordenes de jerarquia. */
+}
+
+
+.logo{
+    width:50px;
+    height:50px;
+    float: left;
+    
+}
+
+h2{
+    
+    float: left;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+#menu-bar{
+    display: none;
+}
+
+.barraMenu{
+    float: right;
+}
+
+.barraIcono{
+    width:40px;
+    height:40px;
+    float: right;
+}
+
+header label{
+    float: right;
+    font-size: 32px;
+    margin : 6px 0;
+    cursor: pointer;
+    
+}
+
+.menu{
+    position: absolute;
+    width:100%;
+    height: 100vh;
+    background: rgba(121,121,121,0.9);
+    top: 50px;
+    left: 0;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu a{
+    display: block;
+    color: white;
+    height: 50px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.9);
+}
+
+.menu a:hover{
+        background: rgba(255,255,255,0.3);
+}
+
+header .contenedor{
+    display: table;
+}
+
+#menu-bar:checked ~ .menu {   /* el ~ indica que cuando el checked este tildado seleccione el menu  */
+    transform: translateX(0%);
+    
+}
+
+
+@media(min-width:1024px) {
+
+    .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0);
+        float: right;
+        display: flex;
+        }
+    header{
+        height: 75px;
+    }
+
+    header label {
+        display: none;
+        }
+    h2{
+        font-size: 40px;
+        margin-top: 15px;
+    }   
+
+    .menu a{
+        font-size: 25px;
+        border: none;
+        height: 75px;
+        padding-top: 23px;
+          
+
+    }   
+
+    .divH1 h1{
+        font-size: 45px;
+    }
+}
+
+ /* FIN DEL HEADER */ 
+
+
+ /* INICIO DEL BANNER */
+
+ .banner{
+    width: 100vw;
+         
+ }
+ .divH1{
+     width:100%;
+     position: absolute;
+     top: 100px;
+     text-align: center; 
+     z-index: 70;
+    
+ }
+
+ h1{
+    color: black;
+    background: rgba(255,255,255,0.6);
+    font-size: 30px;
+
+ }
+
+ 
+   
+ 
+
+ ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.slider{
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background:#fff;
+}
+
+.slider li img{
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.slider li:first-child {
+    opacity: 1; /*Mostramos el primer <li>*/
+}
+
+.slider li:target {
+    opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.menuDeslizable{
+  text-align: center;
+  margin: 20px;
+      
+}
+
+.menuDeslizable li{
+  display: inline-block;
+  text-align: center;
+  padding: 0px;
+  margin-right: 5px;
+  background-color: grey;
+  border-radius: 100%;
+  width: 18px;
+  height: 18px;
+  
+}
+
+.menuDeslizable li a{
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0;
+  border: 0;
+  font-size: 13px;
+   
+}
+ /* FIN DEL BANNER */
+
+.destinos{
+    width:100vw;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    }
+
+.tituloDestinos{
+    font-size: 20px;
+    width: 100%;
+    
+}
+       
+.contenedorDestinos{
+    display: block;
+    margin: 0 auto;
+    
+    }
+
+.destino123{
+    border: 2px solid black;
+    border-radius: 1%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    }
+
+.contenedorDestinos img{
+    width:100%;
+    max-width:1000px;
+}
+
+.contenedorDestinos div p{
+    font-size:30px;
+}
+
+.presupuestos{
+    width: 95%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+   
+    box-sizing: border-box;
+    flex-wrap: wrap;  
+    
+}
+
+.presupuestos div{
+    width: 50%;
+    margin: 5px auto;
+    
+      
+
+}
+
+.presupuestos div img{
+    width: 350px;
+    height: 200px;
+}
+
+
+
+@media (max-width:1024px){
+    h1{
+        color: black;
+        background: rgba(255,255,255,0.6);
+        font-size: 20px;
+    
+     }
+    .presupuestos div{
+        width: 50%;
+        height: 150px;
+        margin: 5px auto 85px;
+        padding-right: 10px;
+        
+    }
+    .presupuestos div img{
+       width:70%;
+       height:100%;
+        
+    }
+    .provincias h3{
+        width: 50%;
+        position: relative;
+        top: -70px;
+        z-index: 100;
+        color: black;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+    .provincias i{
+        position: relative;
+        top: -70px;
+        z-index: 100;
+        color: black;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+    .provincias a{
+        position: relative;
+        top: -70px;
+        z-index: 100;
+        color: black;
+        background-color: rgba(255,255,255,0.7);
+    }
+    .menuDeslizable li a{
+        position: relative;
+        top: -1px;
+        background: none;
+    }    
+}
+
+@media (max-width:736px){
+    header{
+        z-index: 100;
+    }
+    .banner{
+        width:98%;
+    }
+    .destinos{
+        width: 98%;
+    }
+    .presupuestos div{
+        width: 100%;
+        height: 150px;
+        margin: 5px 55px;
+        padding-right: 10px;
+        position: relative;
+        left: 45px;
+        
+    }
+    .presupuestos div img{
+       width:70%;
+       height:100%;
+       margin: 5px auto;
+        
+    }
+    .provincias h3{
+        width: 70px;
+        position: relative;
+        top: -70px;
+        z-index: 70;
+        color: black;
+        font-size: 15px;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+    .provincias i{
+        position: relative;
+        top: -70px;
+        z-index: 70;
+        color: black;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+    .provincias a{
+        position: relative;
+        top: -70px;
+        z-index: 70;
+        color: black;
+        font-size: 11px;
+        background-color: rgba(255,255,255,0.7);
+    }
+
+}
+
+.contenedorContacto{
+    width:98%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contenedorContacto h2{
+    font-size: 25px;
+    display: inline;
+    text-align: center;
+    }
+
+.contenedorContacto p{
+    width:100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.contenedorContacto form{
+    width:75%;
+    max-width: 500px;
+    margin: 5px auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+#texto{
+    width:100%;
+    height:70px;
+    margin-bottom: 15px;
+}
+
+#texto::placeholder{
+    color: rgba(0,0,0,0,1);
+    font-size: 13px;
+    text-align:start;
+        
+}
+
+.botonEnviar{
+    background-color: #2ED92E;
+    width: 100px;
+    margin: 1px auto;
+}
+
+.botonEnviar:hover{
+    background-color: rgba(0,255,0,0.6);
+}
+
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background: #2ED92E;
+}
+
+footer h3{
+    margin-top: 20px;
+    margin-left: 5px;
+    font-size: 15px;
+    display: inline;
+    float: left;
+    color: white;
+}
+
+footer a{
+    margin-right: 5px;
+    margin-top: 20px;
+    float: right;
+    font-size: 20px;
+    color: white;
+    
+}
+
+@media (min-width:1024px){
+    footer h3{
+        margin-top: 9px;
+        font-size: 22px;
+               
+    }
+    
+    footer a{
+        margin-top: 5px;
+        font-size: 35px;
+              
+    }
+}
